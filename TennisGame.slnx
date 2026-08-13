@@ -1,3 +1,8 @@
 <Solution>
-  <Project Path="TennisGame/TennisGame.csproj" />
+  <Folder Name="/src/">
+    <Project Path="TennisGame/TennisGame.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="TennisGame.Tests/TennisGame.Tests.csproj" />
+  </Folder>
 </Solution>
