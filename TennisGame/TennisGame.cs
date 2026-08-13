@@ -10,7 +10,7 @@ namespace TennisGame
         public string GetScore(int player1Score, int player2Score)
         {
             // Implementation for getting the score
-            return " ";
+            return player1Score.ToString() + " - " + player2Score.ToString();
         }
     }
 }

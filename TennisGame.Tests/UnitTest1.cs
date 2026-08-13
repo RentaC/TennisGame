@@ -18,17 +18,21 @@
 
     public class TennisGameTests
     {
-        [Fact]
-        public void GivenPoints_ReturnsCorrectScore()
+        [Theory]
+        [InlineData(0, 0, "0 - 0")]
+        [InlineData(1, 1, "1 - 1")]
+        [InlineData(2, 2, "2 - 2")]
+        [InlineData(3, 3, "3 - 3")]
+        public void GivenPoints_ReturnsCorrectScore(int player1Score, int player2Score, string expectedScore)
         {
             // Arrange
             TennisGame tennisGame = new TennisGame();
 
             // Act
-            string score = tennisGame.GetScore(3, 2);
+            string score = tennisGame.GetScore(player1Score, player2Score);
 
             // Assert
-            Assert.Equal(" ", score);
+            Assert.Equal(expectedScore, score);
 
         }
     }
