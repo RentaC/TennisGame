@@ -6,10 +6,8 @@ namespace TennisGame
 {
     public class TennisGame : ITennisGame
     {
-        private int _player1Score;
-        private int _player2Score;
-        private string _player1Name;
-        private string _player2Name;
+        private Player _player1;
+        private Player _player2;
 
         private static readonly Dictionary<int, string> scoreDict = new Dictionary<int, string>
         {
@@ -21,17 +19,20 @@ namespace TennisGame
 
         public TennisGame(string player1Name, string player2Name)
         {
-            _player1Name = player1Name;
-            _player2Name = player2Name;
+            _player1 = new Player(player1Name);
+            _player2 = new Player(player2Name);
         }
 
         public string GetScore(int player1Score, int player2Score)
         {
-            if (player1Score == player2Score)
+            _player1.Score = player1Score;
+            _player2.Score = player2Score;
+
+            if (_player1.Score == _player2.Score)
             {
-                if (player1Score < 3)
+                if (_player1.Score < 3)
                 {
-                    return scoreDict[player1Score] + " - All";
+                    return scoreDict[_player1.Score] + " - All";
                 }
                 else
                 {
@@ -39,7 +40,7 @@ namespace TennisGame
                 }
             }
             // Implementation default score
-            return scoreDict[player1Score] + " - " + scoreDict[player2Score];
+            return scoreDict[_player1.Score] + " - " + scoreDict[_player2.Score];
         }
     }
 }
