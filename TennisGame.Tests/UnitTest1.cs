@@ -42,7 +42,7 @@
         [InlineData("p1", "p2", 2, 2, "Thirty - All")]
         [InlineData("p1", "p2", 3, 3, "Deuce")]
         [InlineData("p1", "p2", 4, 4, "Deuce")]
-        public void GivenPoints_ReturnsCorrectScore_EdgeCases1(string player1Name, string player2Name, int player1Score, int player2Score, string expectedScore)
+        public void GivenPoints_ReturnsCorrectScore_Ties(string player1Name, string player2Name, int player1Score, int player2Score, string expectedScore)
         {
             // Arrange
             TennisGame tennisGame = new TennisGame(player1Name, player2Name);

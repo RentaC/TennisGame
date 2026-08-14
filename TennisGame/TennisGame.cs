@@ -38,7 +38,7 @@ namespace TennisGame
                     return "Deuce";
                 }
             }
-            // Implementation for getting the score
+            // Implementation default score
             return scoreDict[player1Score] + " - " + scoreDict[player2Score];
         }
     }
