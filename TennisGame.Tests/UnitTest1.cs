@@ -19,10 +19,10 @@
     public class TennisGameTests
     {
         [Theory]
-        [InlineData(0, 0, "0 - 0")]
-        [InlineData(1, 1, "1 - 1")]
-        [InlineData(2, 2, "2 - 2")]
-        [InlineData(3, 3, "3 - 3")]
+        [InlineData(0, 1, "Love - Fifteen")]
+        [InlineData(1, 0, "Fifteen - Love")]
+        [InlineData(2, 1, "Thirty - Fifteen")]
+        [InlineData(3, 1, "Forty - Fifteen")]
         public void GivenPoints_ReturnsCorrectScore(int player1Score, int player2Score, string expectedScore)
         {
             // Arrange
