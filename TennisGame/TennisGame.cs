@@ -27,35 +27,47 @@ namespace TennisGame
         {
             if (player1Score == player2Score)
             {
-                if (player1Score < 3)
-                {
-                    return scoreDict[player1Score] + " - All";
-                }
-                else
-                {
-                    return "Deuce";
-                }
-            } else if (player1Score >= 4 || player2Score >=4) {
-                int scoreDifference = player1Score - player2Score;
-                if (scoreDifference == 1)
-                {
-                    return "Advantage " + _player1.Name;
-                }
-                else if (scoreDifference == -1)
-                {
-                    return "Advantage " + _player2.Name;
-                }
-                else if (scoreDifference >= 2)
-                {
-                    return "Win for " + _player1.Name;
-                }
-                else
-                {
-                    return "Win for " + _player2.Name;
-                }
+                return Tie(player1Score);
+            }
+            else if (player1Score >= 4 || player2Score >=4)
+            {
+                return AdvOrWin(player1Score, player2Score);
             }
             // Implementation default score
             return scoreDict[player1Score] + " - " + scoreDict[player2Score];
+        }
+
+        private string AdvOrWin(int player1Score, int player2Score)
+        {
+            int scoreDifference = player1Score - player2Score;
+            if (scoreDifference == 1)
+            {
+                return "Advantage " + _player1.Name;
+            }
+            else if (scoreDifference == -1)
+            {
+                return "Advantage " + _player2.Name;
+            }
+            else if (scoreDifference >= 2)
+            {
+                return "Win for " + _player1.Name;
+            }
+            else
+            {
+                return "Win for " + _player2.Name;
+            }
+        }
+
+        private static string Tie(int player1Score)
+        {
+            if (player1Score < 3)
+            {
+                return scoreDict[player1Score] + " - All";
+            }
+            else
+            {
+                return "Deuce";
+            }
         }
 
         public void Start()
