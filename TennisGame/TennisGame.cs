@@ -70,12 +70,24 @@ namespace TennisGame
             }
         }
 
-        public void Start()
+        public async Task Start()
         {
-            var score = GetScore(_player1.Score, _player2.Score);
+            string score;
             do
             {
-               Console.WriteLine(score);
+                bool isPlayer1Lucky = await LuckGen.IsPlayer1Lucky();
+                if (isPlayer1Lucky)
+                {
+                    _player1.WinPoint();
+                    Console.WriteLine(_player1.Name + " wins the point!");
+                }
+                else
+                {
+                    _player2.WinPoint();
+                    Console.WriteLine(_player2.Name + " wins the point!");
+                }
+                score = GetScore(_player1.Score, _player2.Score);
+                Console.WriteLine("Current Score: " + GetScore(_player1.Score, _player2.Score));
 
             } while (score != "Win for " + _player1.Name && score != "Win for " + _player2.Name);
 
