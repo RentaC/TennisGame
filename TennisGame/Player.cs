@@ -7,7 +7,7 @@ namespace TennisGame
     public class Player
     {
         public string Name { get; init; }
-        public int Score { get; set; }
+        public int Score { get; private set; }
         public Player(string name)
         {
             Name = name;

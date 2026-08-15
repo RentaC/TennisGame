@@ -25,22 +25,48 @@ namespace TennisGame
 
         public string GetScore(int player1Score, int player2Score)
         {
-            _player1.Score = player1Score;
-            _player2.Score = player2Score;
-
-            if (_player1.Score == _player2.Score)
+            if (player1Score == player2Score)
             {
-                if (_player1.Score < 3)
+                if (player1Score < 3)
                 {
-                    return scoreDict[_player1.Score] + " - All";
+                    return scoreDict[player1Score] + " - All";
                 }
                 else
                 {
                     return "Deuce";
                 }
+            } else if (player1Score >= 4 || player2Score >=4) {
+                int scoreDifference = player1Score - player2Score;
+                if (scoreDifference == 1)
+                {
+                    return "Advantage " + _player1.Name;
+                }
+                else if (scoreDifference == -1)
+                {
+                    return "Advantage " + _player2.Name;
+                }
+                else if (scoreDifference >= 2)
+                {
+                    return "Win for " + _player1.Name;
+                }
+                else
+                {
+                    return "Win for " + _player2.Name;
+                }
             }
             // Implementation default score
-            return scoreDict[_player1.Score] + " - " + scoreDict[_player2.Score];
+            return scoreDict[player1Score] + " - " + scoreDict[player2Score];
+        }
+
+        public void Start()
+        {
+            var score = GetScore(_player1.Score, _player2.Score);
+            do
+            {
+               Console.WriteLine(score);
+
+            } while (score != "Win for " + _player1.Name && score != "Win for " + _player2.Name);
+
         }
     }
 }
