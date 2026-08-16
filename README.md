@@ -46,10 +46,17 @@ dotnet test
 The game will prompt you to enter player names and simulate a tennis match. Follow the on-screen instructions to play.
 (To enter player names, type them and press Enter)
 
+![image alt](https://github.com/RentaC/TennisGame/blob/a8b502aa4d65d04c472f1dcd359da6a7d44e32d7/img/StartGame.png)
+![image alt](https://github.com/RentaC/TennisGame/blob/a8b502aa4d65d04c472f1dcd359da6a7d44e32d7/img/EnteredNames.png)
+
 ### After entering the all players names, and pressing enter, the game will simulate points being played. 
 After each point, the game will display the current score and announce the winner when the match concludes.
 You can see some sample output below:
 
+![image alt](https://github.com/RentaC/TennisGame/blob/a8b502aa4d65d04c472f1dcd359da6a7d44e32d7/img/TennisResultFull_Normal.png)
+![image alt](https://github.com/RentaC/TennisGame/blob/a8b502aa4d65d04c472f1dcd359da6a7d44e32d7/img/TennisResultFull.png)
+![image alt](https://github.com/RentaC/TennisGame/blob/a8b502aa4d65d04c472f1dcd359da6a7d44e32d7/img/TennisResultFull_WinnerTakesItAll.png)
+![image alt](https://github.com/RentaC/TennisGame/blob/a8b502aa4d65d04c472f1dcd359da6a7d44e32d7/img/TennisResultFull_LongestGame.png)
 
 ## Contributing
 
