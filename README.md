@@ -1,6 +1,7 @@
 # TennisGame
 
 TennisGame is a small .NET 10 solution that contains a TennisGame project and accompanying tests. This repository is intended for development and demonstration of game logic, unit testing, and .NET project structure.
+The actual game is a small console application. It features, game logic, random point generator and an artificial delay between each point played. For instructions on how to play and run please reffer below. 
 
 ## Requirements
 
@@ -24,7 +25,9 @@ Or open the solution file `TennisGame.slnx` in Visual Studio and build from the 
 
 ## Run
 
-If the main project is an executable you can run it with:
+To run, simply open the project via Visual Studio, select the solution `TennisGame.slnx` and run using IDE.
+
+Another way to run the project, after downloading (and unzipping if needed) is to open with File Explorer the folder `TennisGame` (inside you will find `TennisGame.slnx`). Open in terminal, and run the following:
 
 ```powershell
 dotnet run --project TennisGame
