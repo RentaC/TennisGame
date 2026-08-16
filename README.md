@@ -41,11 +41,12 @@ dotnet test
 ```
 
 ## Usage (How to Play)
-###Start the game by running the main project. 
+
+### Start the game by running the main project. 
 The game will prompt you to enter player names and simulate a tennis match. Follow the on-screen instructions to play.
 (To enter player names, type them and press Enter)
 
-###After entering the all players names, and pressing enter, the game will simulate points being played. 
+### After entering the all players names, and pressing enter, the game will simulate points being played. 
 After each point, the game will display the current score and announce the winner when the match concludes.
 You can see some sample output below:
 
